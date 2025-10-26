@@ -1,10 +1,10 @@
    @import url(../style/link.css);
    :root {
-            --primary: #00c8ff;
-            --secondary: #ff2a6d;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --accent: #05f2db;
+            --primary: #000000;
+            --secondary: #e40048;
+            --dark: #2e2e6d;
+            --light: #f8f9fab4;
+            --accent: #191430cb;
         }
 
 
@@ -115,7 +115,7 @@
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6768b0b8-3570-47e1-ae31-4a4a55ed6c28.png') no-repeat center center/cover;
+                        url('../img/fon/4089cad6b1158226faff6ae0532842b8.jpg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -284,7 +284,7 @@
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
         }
         
         .product-card {

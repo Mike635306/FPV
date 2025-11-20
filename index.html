@@ -9,6 +9,8 @@
     <title>Document</title>
    <link rel="stylesheet" href="./style/stail.css">
  <script src="./main.js" defer ></script>
+  <script src="https://unpkg.com/three@0.150.1/build/three.min.js"></script>
+    <script src="./sphere.js" defer ></script>
 </head>
 <body>
     <header>
@@ -35,6 +37,9 @@
     
     <section class="hero" id="home">
         <div class="hero-content">
+        <div id="container">
+        <div class="loading" id="loading">Loading 3D Scene...</div>
+        </div>
             <h1>Премиум FPV дроны</h1>
             <p>Откройте мир высокоскоростных полетов с нашими профессиональными гоночными и фристайл FPV дронами. Лучшие характеристики, качество сборки и производительность.</p>
             <a href="#products" class="cta-button"  >Собрать дрон</a>
@@ -53,7 +58,7 @@
                 <div class="category-info">
                     <h3>Гоночные дроны</h3>
                     <p>Максимальная скорость и управляемость для соревнований</p>
-                    <a href="#" class="category-link">Смотреть все →</a>
+                    <a href="#" class="category-link">Собрать →</a>
                 </div>
             </div>
             
@@ -64,7 +69,7 @@
                 <div class="category-info">
                     <h3>Фристайл дроны</h3>
                     <p>Лучшая стабильность и камера для креативных полетов</p>
-                    <a href="#" class="category-link">Смотреть все →</a>
+                    <a href="#" class="category-link">Собрать →</a>
                 </div>
             </div>
             
@@ -75,7 +80,7 @@
                 <div class="category-info">
                     <h3>Для начинающих</h3>
                     <p>Прочные и простые в управлении модели для новичков</p>
-                    <a href="#" class="category-link">Смотреть все →</a>
+                    <a href="#" class="category-link">Собрать →</a>
                 </div>
             </div>
             
@@ -85,8 +90,8 @@
                 </div>
                 <div class="category-info">
                     <h3>Для long reng</h3>
-                    <p>сложные в управлении</p>
-                    <a href="#" class="category-link">Смотреть все →</a>
+                    <p>сложные в управлении дорогие и тяжёлые дроны</p>
+                    <a href="#" class="category-link">Собрать →</a>
                 </div>
             </div>
 
@@ -96,6 +101,7 @@
     <section class="products" id="products">
         <div class="section-title">
             <h2>Комплектующие</h2>
+            <h3>КОНТРОЛЛЕРЫ ПОЛЕТА</h3>
         </div>
 
         <div class="product-grid">
@@ -181,7 +187,142 @@
             </div>
         </div>
     </section>
-    
+
+<section class="products" id="products">
+        <div class="section-title">
+            <h3>РАМЫ</h3>
+        </div>
+
+              <div class="product-grid">
+            <div class="product-card fade-in">
+                <div class="product-img">
+                    <img src="./img/ramd/orig.webp" alt="контроллер полёта" />
+                    <span class="product-badge"></span>
+                </div>
+                <div class="product-info">
+                    <h3>SpeedyBee<span class="product-price">$85</span></h3>
+                    <div class="product-specs">
+                    </div>
+                    <button class="add-to-cart" data-id="1" data-name="SpeedyBee" data-price="85">В корзину</button>
+                </div>
+            </div>
+            
+            <div class="product-card fade-in" style="animation-delay: 0.1s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (1).jpeg" alt="контроллер полёта" />
+                </div>
+                <div class="product-info">
+                    <h3>SpeedyBee AIO F405 <span class="product-price">$61</span></h3>
+                    <div class="product-specs">
+                       <span></span>
+                       <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="2" data-name="SpeedyBee AIO F405 " data-price="61">В корзину</button>
+                                                
+            </div>
+            
+            <div class="product-card fade-in" style="animation-delay: 0.2s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (1).webp" alt="контроллер полёта" />
+                    <span class="product-badge">Новинка</span>
+                </div>
+                <div class="product-info">
+                    <h3>BeginDrone X1 <span class="product-price">$35</span></h3>
+                    <div class="product-specs">
+                        <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="3" data-name="BeginDrone X1" data-price="35">В корзину</button>
+                </div>
+            </div>
+            
+            <div class="product-card fade-in" style="animation-delay: 0.3s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (2).webp" alt="контроллер полёта" />
+                </div>
+                <div class="product-info">
+                    <h3>CarbonRacer Elite <span class="product-price">$47</span></h3>
+                    <div class="product-specs">
+                        <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="4" data-name="CarbonRacer Elite" data-price="47">В корзину</button>
+                </div>
+            </div>
+            
+            <div class="product-card fade-in" style="animation-delay: 0.4s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (3).webp" alt="контроллер полёта" />
+                </div>
+                <div class="product-info">
+                    <h3>MiniFPV TinyWhoop <span class="product-price">$54</span></h3>
+                    <div class="product-specs">
+                        <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="5" data-name="MiniFPV TinyWhoop" data-price="54">В корзину</button>
+                </div>
+            </div>
+            
+            <div class="product-card fade-in" style="animation-delay: 0.5s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (4).webp" alt="контроллер полёта" />
+                    <span class="product-badge"></span> 
+                </div>
+                <div class="product-info">
+                    <h3>Контроллер полета<span class="product-price">$37</span></h3>
+                    <div class="product-specs">
+                       <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="6" data-name="NightHawk" data-price="37">В корзину</button>
+                </div>
+            </div>
+
+      <div class="product-card fade-in" style="animation-delay: 0.5s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (5).webp" alt="контроллер полёта" />
+                    <span class="product-badge"></span> 
+                </div>
+                <div class="product-info">
+                    <h3>Контроллер полета<span class="product-price">$37</span></h3>
+                    <div class="product-specs">
+                       <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="6" data-name="NightHawk" data-price="37">В корзину</button>
+                </div>
+            </div>
+
+      <div class="product-card fade-in" style="animation-delay: 0.5s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (6).webp" alt="контроллер полёта" />
+                    <span class="product-badge"></span> 
+                </div>
+                <div class="product-info">
+                    <h3>Контроллер полета<span class="product-price">$37</span></h3>
+                    <div class="product-specs">
+                       <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="6" data-name="NightHawk" data-price="37">В корзину</button>
+                </div>
+            </div>
+    <div class="product-card fade-in" style="animation-delay: 0.5s;">
+                <div class="product-img">
+                    <img src="./img/ramd/orig (7).webp" alt="контроллер полёта" />
+                    <span class="product-badge"></span> 
+                </div>
+                <div class="product-info">
+                    <h3>Контроллер полета<span class="product-price">$37</span></h3>
+                    <div class="product-specs">
+                       <span></span>
+                    </div>
+                    <button class="add-to-cart" data-id="6" data-name="NightHawk" data-price="37">В корзину</button>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
     <!-- Модальное окно корзины -->
     <div class="modal" id="cartModal">
         <div class="modal-content">

@@ -39,7 +39,7 @@
                     // Create renderer
                     renderer = new THREE.WebGLRenderer({ antialias: true });
                     renderer.setSize(window.innerWidth, window.innerHeight);
-                    renderer.setClearColor(0x000000);
+                    renderer.setClearColor(0, 255, 179, 0.993);
                     
                     const container = document.getElementById('container');
                     container.appendChild(renderer.domElement);
@@ -116,7 +116,7 @@
                         context.clearRect(0, 0, canvas.width, canvas.height);
                         
                         // Draw text
-                        context.fillStyle = 'white';
+                        context.fillStyle = 'rgba(0, 255, 179, 0.993)';
                         context.font = 'bold 20px Courier New';
                         context.textAlign = 'center';
                         context.textBaseline = 'middle';
